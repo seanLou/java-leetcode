@@ -16,19 +16,19 @@ package cn.louguanyang.code.array;
  */
 public class StringRestore {
 
-    public static void main(String[] args) {
-        // 解题思路
-        // 新建一个字符数组，循环遍历所在位置的下标数组，将原字符串转换的字符数组的值赋值给新的字符数组。
-        String answer = restoreString("codeleet", new int[]{4,5,6,7,0,2,1,3});
-        System.out.println("leetcode".equals(answer));
-    }
+  public static void main(String[] args) {
+    // 解题思路
+    // 新建一个字符数组，循环遍历所在位置的下标数组，将原字符串转换的字符数组的值赋值给新的字符数组。
+    String answer = restoreString("codeleet", new int[]{4, 5, 6, 7, 0, 2, 1, 3});
+    System.out.println("leetcode".equals(answer));
+  }
 
-    public static String restoreString(String s, int[] indices) {
-        char[] chars = s.toCharArray();
-        char[] newChars = new char[chars.length];
-        for (int i = 0; i < indices.length; i++) {
-            newChars[indices[i]] = chars[i];
-        }
-        return new String(newChars);
+  public static String restoreString(String s, int[] indices) {
+    char[] chars = s.toCharArray();
+    char[] newChars = new char[chars.length];
+    for (int i = 0; i < indices.length; i++) {
+      newChars[indices[i]] = chars[i];
     }
+    return new String(newChars);
+  }
 }
