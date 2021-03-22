@@ -12,15 +12,16 @@ public class InsertionSort {
 
   public static void main(String[] args) {
     int[] a = {4,5,6,3,2,1};
-    insertionSort(a, a.length);
+    insertionSort(a);
     System.out.println(Arrays.toString(a));
   }
 
-  public static void insertionSort(int[] a, int n) {
-    if (n <= 1) {
+  public static void insertionSort(int[] a) {
+    int length = a.length;
+    if (length <= 1) {
       return;
     }
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < length; i++) {
       int value = a[i];
       int j = i - 1;
       // 查找插入的位置
