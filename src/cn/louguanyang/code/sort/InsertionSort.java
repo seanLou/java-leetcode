@@ -1,5 +1,7 @@
 package cn.louguanyang.code.sort;
 
+import java.util.Arrays;
+
 /**
  * 插入排序
  *
@@ -8,21 +10,23 @@ package cn.louguanyang.code.sort;
  */
 public class InsertionSort {
 
-  public void insertionSort(int[] a, int n) {
+  public static void main(String[] args) {
+    int[] a = {4,5,6,3,2,1};
+    insertionSort(a, a.length);
+    System.out.println(Arrays.toString(a));
+  }
+
+  public static void insertionSort(int[] a, int n) {
     if (n <= 1) {
       return;
     }
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; i++) {
       int value = a[i];
       int j = i - 1;
       // 查找插入的位置
-      for (; j >=0; --j) {
-        if (a[j] > value) {
-          // 数据移动
-          a[j + 1] = a[j];
-        } else {
-          break;
-        }
+      while (j >= 0 && a[j] > value) {
+        a[j + 1] = a[j];
+        j--;
       }
       // 插入数据
       a[j + 1] = value;
