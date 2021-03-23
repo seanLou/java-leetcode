@@ -12,11 +12,11 @@ public class InsertionSort {
 
   public static void main(String[] args) {
     int[] a = {4,5,6,3,2,1};
-    insertionSort(a);
+    sort(a);
     System.out.println(Arrays.toString(a));
   }
 
-  public static void insertionSort(int[] a) {
+  public static void sort(int[] a) {
     int length = a.length;
     if (length <= 1) {
       return;
