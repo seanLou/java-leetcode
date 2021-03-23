@@ -1,5 +1,7 @@
 package cn.louguanyang.code.sort;
 
+import static cn.louguanyang.code.sort.QuickSort.getInts;
+
 import java.util.Arrays;
 
 /**
@@ -11,7 +13,9 @@ import java.util.Arrays;
 public class InsertionSort {
 
   public static void main(String[] args) {
-    int[] a = {4,5,6,3,2,1};
+    int count = 20;
+    int[] a = getInts(count);
+
     sort(a);
     System.out.println(Arrays.toString(a));
   }
